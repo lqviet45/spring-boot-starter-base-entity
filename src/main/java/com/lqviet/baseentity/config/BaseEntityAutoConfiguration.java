@@ -1,4 +1,4 @@
-﻿package com.lqviet.baseentity.config;
+package com.lqviet.baseentity.config;
 
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

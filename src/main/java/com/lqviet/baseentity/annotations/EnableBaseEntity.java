@@ -1,4 +1,4 @@
-﻿package com.lqviet.baseentity.annotations;
+package com.lqviet.baseentity.annotations;
 
 import com.lqviet.baseentity.config.BaseEntityAutoConfiguration;
 import org.springframework.context.annotation.Import;

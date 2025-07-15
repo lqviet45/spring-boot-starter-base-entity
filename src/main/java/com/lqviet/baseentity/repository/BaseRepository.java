@@ -1,4 +1,4 @@
-﻿package com.lqviet.baseentity.repository;
+package com.lqviet.baseentity.repository;
 
 import com.lqviet.baseentity.entities.BaseEntity;
 import org.springframework.data.domain.Page;
@@ -23,7 +23,7 @@ import java.util.Optional;
  * @version 1.0.0
  */
 @NoRepositoryBean
-public interface BaseRepository<T extends BaseEntity, ID> extends JpaRepository<T, Long> {
+public interface BaseRepository<T extends BaseEntity> extends JpaRepository<T, Long> {
 
     @Query("SELECT e FROM #{#entityName} e WHERE e.id = :id AND e.isDeleted = false")
     Optional<T> findByIdNotDeleted(@Param("id") Long id);
