@@ -4,6 +4,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
@@ -20,21 +21,20 @@ import java.util.Optional;
 @EnableJpaAuditing(auditorAwareRef = "auditorProvider")
 public class AuditingConfig {
 
-    // Default auditor when Spring Security is NOT present
     @Bean
     @ConditionalOnMissingBean
     public AuditorAware<String> auditorProvider() {
-        return new DefaultAuditorAware(); // Returns "system"
+        return new DefaultAuditorAware();
     }
 
-    // Spring Security auditor when Spring Security IS present
     @Configuration
     @ConditionalOnClass(name = "org.springframework.security.core.Authentication")
     static class SpringSecurityAuditingConfig {
 
         @Bean
-        public AuditorAware<String> springSecurityAuditorProvider() {
-            return new SpringSecurityAuditorAware(); // Uses security context
+        @Primary  // Add this annotation
+        public AuditorAware<String> auditorProvider() {  // Same bean name
+            return new SpringSecurityAuditorAware();
         }
     }
 
