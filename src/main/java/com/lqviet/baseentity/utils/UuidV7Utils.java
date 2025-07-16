@@ -1,4 +1,4 @@
-﻿package com.lqviet.baseentity.utils;
+package com.lqviet.baseentity.utils;
 
 import java.nio.ByteBuffer;
 import java.security.SecureRandom;

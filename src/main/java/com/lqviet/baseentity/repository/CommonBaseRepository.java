@@ -1,4 +1,4 @@
-﻿package com.lqviet.baseentity.repository;
+package com.lqviet.baseentity.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

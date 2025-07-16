@@ -1,4 +1,4 @@
-﻿package com.lqviet.baseentity.repository;
+package com.lqviet.baseentity.repository;
 
 import com.lqviet.baseentity.entities.UuidBaseEntity;
 import org.springframework.data.jpa.repository.Query;

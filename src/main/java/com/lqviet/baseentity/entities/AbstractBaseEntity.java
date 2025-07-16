@@ -1,4 +1,4 @@
-﻿package com.lqviet.baseentity.entities;
+package com.lqviet.baseentity.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
