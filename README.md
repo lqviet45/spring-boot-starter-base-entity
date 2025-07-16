@@ -95,6 +95,7 @@ mvn clean install
 - **Database** - Any JPA-compatible database (e.g., PostgreSQL, MySQL, H2 for testing)
 
 ## 🔧 Installation & Setup
+- For Details information about the repository please go to [Repository guide](https://github.com/lqviet45/spring-boot-starter-base-entity/blob/main/Repository%20guide.md)
 
 ### 1. Add Dependency
 For Maven:
